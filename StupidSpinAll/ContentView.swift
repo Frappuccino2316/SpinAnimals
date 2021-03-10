@@ -17,8 +17,9 @@ struct ContentView: View {
                     AnimalRow(imageName: imageList[index])
                 }
             }
-            .navigationTitle("Animal List")
+            .navigationTitle("Animals")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
