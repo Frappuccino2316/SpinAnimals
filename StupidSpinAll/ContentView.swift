@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    let imageList = ["dog", "fukurou", "ika", "kirin", "shika", "shirokuma", "zarigani"]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(0 ..< imageList.count) { index in
+                NavigationLink(destination: AnimalSpin(imageName: imageList[index])) {
+                    AnimalRow(imageName: imageList[index])
+                }
+            }
+            .navigationTitle("Animal List")
+        }
     }
 }
 
