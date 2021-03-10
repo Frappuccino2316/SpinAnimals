@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2180F2725F9075900930D47 /* SpinTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2180F2625F9075900930D47 /* SpinTimer.swift */; };
 		B2D2016625F8E1B50004FF37 /* StupidSpinAllApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2016525F8E1B50004FF37 /* StupidSpinAllApp.swift */; };
 		B2D2016825F8E1B50004FF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2016725F8E1B50004FF37 /* ContentView.swift */; };
 		B2D2016A25F8E1B90004FF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D2016925F8E1B90004FF37 /* Assets.xcassets */; };
 		B2D2016D25F8E1B90004FF37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D2016C25F8E1B90004FF37 /* Preview Assets.xcassets */; };
 		B2D2017825F8E67D0004FF37 /* AnimalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2017725F8E67D0004FF37 /* AnimalRow.swift */; };
-		B2EB6BD525F8EFE30053E274 /* AnimalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB6BD425F8EFE30053E274 /* AnimalList.swift */; };
 		B2EB6BD825F8F5130053E274 /* AnimalSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB6BD725F8F5130053E274 /* AnimalSpin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2180F2625F9075900930D47 /* SpinTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinTimer.swift; sourceTree = "<group>"; };
 		B2D2016225F8E1B40004FF37 /* StupidSpinAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidSpinAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D2016525F8E1B50004FF37 /* StupidSpinAllApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidSpinAllApp.swift; sourceTree = "<group>"; };
 		B2D2016725F8E1B50004FF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		B2D2016C25F8E1B90004FF37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2D2016E25F8E1B90004FF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2D2017725F8E67D0004FF37 /* AnimalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRow.swift; sourceTree = "<group>"; };
-		B2EB6BD425F8EFE30053E274 /* AnimalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalList.swift; sourceTree = "<group>"; };
 		B2EB6BD725F8F5130053E274 /* AnimalSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSpin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2180F2025F9031700930D47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2180F2625F9075900930D47 /* SpinTimer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B2D2015925F8E1B40004FF37 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +66,7 @@
 		B2D2016425F8E1B40004FF37 /* StupidSpinAll */ = {
 			isa = PBXGroup;
 			children = (
+				B2180F2025F9031700930D47 /* Models */,
 				B2D2017625F8E63C0004FF37 /* Views */,
 				B2D2016525F8E1B50004FF37 /* StupidSpinAllApp.swift */,
 				B2D2016725F8E1B50004FF37 /* ContentView.swift */,
@@ -80,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				B2D2017725F8E67D0004FF37 /* AnimalRow.swift */,
-				B2EB6BD425F8EFE30053E274 /* AnimalList.swift */,
 				B2EB6BD725F8F5130053E274 /* AnimalSpin.swift */,
 			);
 			path = Views;
@@ -156,9 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2D2016825F8E1B50004FF37 /* ContentView.swift in Sources */,
-				B2EB6BD525F8EFE30053E274 /* AnimalList.swift in Sources */,
 				B2D2017825F8E67D0004FF37 /* AnimalRow.swift in Sources */,
 				B2EB6BD825F8F5130053E274 /* AnimalSpin.swift in Sources */,
+				B2180F2725F9075900930D47 /* SpinTimer.swift in Sources */,
 				B2D2016625F8E1B50004FF37 /* StupidSpinAllApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
