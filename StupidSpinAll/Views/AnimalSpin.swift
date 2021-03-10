@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct AnimalSpin: View {
+    @ObservedObject var timer = SpinTimer(timer: Timer(), angle: 0.0)
     let imageName: String
-    @State private var angle: Double = 180.0
     
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .frame(width: 200, height: 200)
-            .rotationEffect(Angle(degrees: angle))
+        VStack {
+            Image(imageName)
+                .resizable()
+                .frame(width: 200, height: 200)
+                .rotationEffect(Angle(degrees: timer.angle))
+            Button(action: {timer.start()}) {
+                Text("Start")
+            }
+            Button(action: {timer.stop()}) {
+                Text("Stop")
+            }
+        }
     }
 }
 
