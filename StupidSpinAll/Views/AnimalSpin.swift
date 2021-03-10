@@ -17,11 +17,15 @@ struct AnimalSpin: View {
                 .resizable()
                 .frame(width: 200, height: 200)
                 .rotationEffect(Angle(degrees: timer.angle))
-            Button(action: {timer.start()}) {
-                Text("Start")
-            }
-            Button(action: {timer.stop()}) {
-                Text("Stop")
+            HStack {
+                Button(action: {timer.start()}) {
+                    Text("Start")
+                }
+                .padding()
+                Button(action: {timer.stop()}) {
+                    Text("Stop")
+                }
+                .padding()
             }
         }
     }
