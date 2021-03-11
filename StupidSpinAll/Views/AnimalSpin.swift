@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnimalSpin: View {
-    @ObservedObject var timer = SpinTimer(timer: Timer(), angle: 0.0)
+    @ObservedObject var timer: SpinTimer
     let imageName: String
     
     var body: some View {
@@ -33,6 +33,6 @@ struct AnimalSpin: View {
 
 struct AnimalSpin_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalSpin(imageName: "dog")
+        AnimalSpin(timer: SpinTimer(timer: Timer(), angle: 0.0), imageName: "dog")
     }
 }
