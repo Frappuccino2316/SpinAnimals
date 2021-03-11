@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     let imageList = ["dog", "fukurou", "ika", "kirin", "shika", "shirokuma", "zarigani"]
+    let spinTimer = SpinTimer(timer: Timer(), angle: 0.0)
     
     var body: some View {
         NavigationView {
             List(0 ..< imageList.count) { index in
-                NavigationLink(destination: AnimalSpin(imageName: imageList[index])) {
+                NavigationLink(destination: AnimalSpin(timer: spinTimer, imageName: imageList[index]).onDisappear() {
+                    spinTimer.stop()
+                }) {
                     AnimalRow(imageName: imageList[index])
                 }
             }
