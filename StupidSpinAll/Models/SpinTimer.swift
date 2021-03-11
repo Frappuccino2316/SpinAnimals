@@ -10,6 +10,8 @@ import Foundation
 class SpinTimer: ObservableObject {
     @Published var timer: Timer
     @Published var angle: Double
+    @Published var speed: Double = 0.04
+    @Published var spinNow: Bool = false
     
     init(timer: Timer, angle: Double) {
         self.timer = timer
@@ -17,8 +19,9 @@ class SpinTimer: ObservableObject {
     }
     
     func start() {
-        self.timer.invalidate()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
+        timer.invalidate()
+        spinNow = true
+        timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true) { _ in
             self.angle += 1.0
             if self.angle == 360.0 {
                 self.angle = 0.0
@@ -27,6 +30,21 @@ class SpinTimer: ObservableObject {
     }
     
     func stop() {
-        self.timer.invalidate()
+        timer.invalidate()
+        spinNow = false
+    }
+    
+    func speedUp() {
+        if speed <= 0.0025 {
+            return
+        }
+        speed = speed / 2
+    }
+    
+    func speedDown() {
+        if speed >= 0.04 {
+            return
+        }
+        speed = speed * 2
     }
 }
